@@ -1,15 +1,15 @@
 #!/bin/python3
 
 import os
+import subprocess
 import tkinter as tk
 from tkinter import ttk, messagebox
-
 
 class ThemeChangerApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Libadwaita Theme Changer")
-        self.root.geometry("400x300")
+        self.root.geometry("400x400")
         self.root.resizable(False, False)
 
         # Constants
@@ -27,25 +27,44 @@ class ThemeChangerApp:
         self.themes = []
         self.selected_theme = tk.StringVar()
 
-        # GUI Layout
+        # Styles
+        self.style = ttk.Style()
+        self.style.configure('TButton', font=('Helvetica', 12), padding=10, relief="flat", background="#4CAF50", foreground="white")
+        self.style.configure('TLabel', font=('Helvetica', 12), background="#f5f5f5")
+        self.style.map('TButton', background=[('active', '#45a049')], relief=[('active', 'raised')])
+        self.style.configure('Red.TButton', font=('Helvetica', 12), padding=10, relief="flat", background="#F44336", foreground="white")
+        
+        self.style.configure('TOptionMenu', font=('Helvetica', 12), relief="flat", background="#f0f0f0", foreground="black")
+
+        # Spawn GUI
         self.create_widgets()
 
     def create_widgets(self):
+        # Background
+        frame = tk.Frame(self.root, bg="#f5f5f5", padx=20, pady=20)
+        frame.pack(fill="both", expand=True)
+
+        # Title label
+        title_label = ttk.Label(frame, text="Libadwaita Theme Changer", font=("Helvetica", 16, "bold"), anchor="center")
+        title_label.pack(pady=20)
+
         # Theme directory selection
-        ttk.Label(self.root, text="Select Theme Directory:").pack(pady=10)
+        ttk.Label(frame, text="Select Theme Directory:").pack(pady=10)
 
         # OptionMenu for theme directory selection
-        dir_menu = ttk.OptionMenu(self.root, self.selected_theme_dir, "Please select a directory", *self.theme_dirs.keys(), command=self.update_themes)
-        dir_menu.pack(pady=5)
+        dir_menu = ttk.OptionMenu(frame, self.selected_theme_dir, "Please select a directory", *self.theme_dirs.keys(), command=self.update_themes)
+        dir_menu.pack(pady=5, fill="x")
 
         # Theme selection
-        ttk.Label(self.root, text="Select Theme:").pack(pady=10)
-        self.theme_menu = ttk.OptionMenu(self.root, self.selected_theme, "No Themes Available")
-        self.theme_menu.pack(pady=5)
+        ttk.Label(frame, text="Select Theme:").pack(pady=10)
+        self.theme_menu = ttk.OptionMenu(frame, self.selected_theme, "No Themes Available")
+        self.theme_menu.pack(pady=5, fill="x")
+        
+        self.style.map('Red.TButton', background=[('active', '#e53935')])
 
         # Buttons
-        ttk.Button(self.root, text="Apply Theme", command=self.apply_theme).pack(pady=10)
-        ttk.Button(self.root, text="Reset Theme", command=self.reset_theme).pack(pady=5)
+        ttk.Button(frame, text="Apply Theme", command=self.apply_theme).pack(pady=15, fill="x")
+        ttk.Button(frame, text="Reset Theme", command=self.reset_theme, style='Red.TButton').pack(pady=5, fill="x")
 
     def update_themes(self, _):
         """Update the theme list when a directory is selected."""
@@ -69,6 +88,23 @@ class ThemeChangerApp:
                 self.selected_theme.set("No Themes Available")
         else:
             messagebox.showerror("Error", f"Directory not found: {theme_dir}")
+            
+    def remove_gtk_assets(self):
+        """Remove gtk assets and gtk.css files."""
+        try:
+            # Define the paths to the assets directory and gtk.css file
+            assets_path = os.path.join(self.home_dir, '.config/gtk-4.0/assets/')
+            gtk_css_path = os.path.join(self.home_dir, '.config/gtk-4.0/gtk.css')
+
+            # Remove the assets directory
+            subprocess.run(['rm', '-rf', assets_path], check=True)
+
+            # Remove the gtk.css file
+            subprocess.run(['rm', '-rf', gtk_css_path], check=True)
+
+        except subprocess.CalledProcessError as e:
+            print(f"Error occurred: {e}")
+            messagebox.showerror("Error", f"Failed to prep by removing assets: {e}")
 
     def remove_current_theme(self):
         """Remove current theme links in the config directory."""
@@ -96,6 +132,7 @@ class ThemeChangerApp:
 
         # Apply theme
         try:
+            self.remove_gtk_assets()
             self.remove_current_theme()
             self.set_new_theme(theme_path)
             os.system(f'gsettings set org.gnome.desktop.interface gtk-theme "{self.selected_theme.get()}"')
@@ -119,3 +156,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = ThemeChangerApp(root)
     root.mainloop()
+
