@@ -8,8 +8,6 @@ To install manually:
 - bleachbit
 - python-tk
 - gnome-tweaks
-- libreoffice
-- libreoffice-gnome
 - ttf-mscorefonts-installer
 - cmus
 - gdu
@@ -25,4 +23,7 @@ To install manually:
 - gnome-disk-utility
 - speedtest
 
-
+Command:
+```sh
+sudo apt install papirus-icon-theme adw-gtk3 python bleachbit python-tk gnome-tweaks ttf-mscorefonts-installer cmus gdu amberol timeshift dconf-editor htop celluloid rar unrar firejail gparted gnome-disk-utility speedtest-cli
+```
