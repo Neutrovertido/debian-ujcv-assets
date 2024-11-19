@@ -1,0 +1,20 @@
+Caffeine
+Pano
+Dash to Dock
+Dash to Panel
+Removable Drive Menu
+User Themes
+Sound Input & Output Device Chooser
+Status Area Horizontal Spacing
+Tray Icons: Reloaded
+Expandable Notifications
+Vitals
+No overview at startup
+Blur my shell
+Rounded Windows Corners
+Alphabetical App Grid
+Logo Menu
+Apps Menu
+Places Status Indicator
+Emoji Selector
+Color Picker
