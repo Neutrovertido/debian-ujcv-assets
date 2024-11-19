@@ -36,5 +36,5 @@ sudo apt update && sudo apt upgrade
 
 Command:
 ```sh
-sudo apt install papirus-icon-theme python3 bleachbit python3-tk gnome-tweaks ttf-mscorefonts-installer cmus gdu amberol timeshift dconf-editor htop celluloid rar unrar firejail gparted gnome-disk-utility speedtest-cli
+sudo apt install papirus-icon-theme python3 bleachbit python3-tk gnome-tweaks ttf-mscorefonts-installer cmus gdu timeshift dconf-editor htop celluloid rar unrar firejail gparted gnome-disk-utility speedtest-cli
 ```
