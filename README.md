@@ -253,3 +253,9 @@ To simplify the process, we provide the `gnome-shell-theme.gresource` inside `sy
 The step to apply the gresource is straightforward, just replace `/usr/share/gnome-shell/gnome-shell-theme.gresource` with the one provided by us.
 
 To see the changes, **reboot**, a simple log-out will not do.
+
+## User Customization
+We previously installed the extensions. Now we need to change a few things to match the system branding.
+
+1. Change the profile picture to `user.png` from the `system-assets` folder.
+2. Change the desktop wallpaper to `wallpaper.jpg` also from the `system-assets` folder.
