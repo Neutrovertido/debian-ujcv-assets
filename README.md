@@ -251,3 +251,5 @@ To do so manually (ie. you want to put your own background image), follow the gu
 To simplify the process, we provide the `gnome-shell-theme.gresource` inside `system-assets` already precompiled. It has the image blurred by default, if you want to use the original, unblurred image use `unblurred-gnome-shell-theme.gresource` instead. Just make sure to rename it back to the original name.
 
 The step to apply the gresource is straightforward, just replace `/usr/share/gnome-shell/gnome-shell-theme.gresource` with the one provided by us.
+
+To see the changes, **reboot**, a simple log-out will not do.
