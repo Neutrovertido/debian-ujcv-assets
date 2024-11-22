@@ -378,7 +378,7 @@ We decided to not go the extra mile and build a live `.iso` but we did create a 
 # License
 This project is licensed under the **GPL-3.0 License**. See the `LICENSE` file for more information.
 
-# Acknoledgements
+# Acknowledgements
 - **Neutrovertido**: for putting all of this together, authoring most of the scripts, authoring the documentation and compiling resources.
 - **UJCV**: for providing the resources.
 - **Debian Team**: For creating the Debian operating system.
