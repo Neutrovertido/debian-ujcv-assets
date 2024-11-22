@@ -193,3 +193,12 @@ Open gnome-tweaks and change the following settings:
 - Add minimize and maximize buttons to windows
 - Change touchpad to "Area"
 - Enable window resizing with secondary button
+
+## GRUB configuration
+Place `bg-ujcv.png` from `system-assets` in `/boot/grub/`
+
+
+Append the following line to `/etc/default/grub`
+```sh
+GRUB_BACKGROUND="/boot/grub/bg-ujcv.png"
+```
