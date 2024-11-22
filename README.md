@@ -190,6 +190,9 @@ This can all be done within the "Extensions" app.
 - Change Logo Menu to use an icon of your liking, in this case we use the monochrome Debian icon.
 - You may pin apps to Dash-to-Dock/Dash-to-Panel as per your preference. If using Dash to Dock, move the App icon to the left side of the dock and also shrink the dock.
 
+**Recommended Dash to Dock layout:**
+![Dash to Dock](/screenshots/dtd-layout.png)
+
 
 ## Shortcuts
 - Set `gnome-terminal` to launch with shortcut: `Ctrl + Alt + T`
