@@ -374,3 +374,24 @@ Change the default music player to `Amberol` and the default video player to `Ce
 To build a functional live `.iso` file and make it installable you will need to use `live-build` and later `calamares` to make an installer. But this is all outside the scope of this repo.
 
 We decided to not go the extra mile and build a live `.iso` but we did create a **clonezilla** image that can be later be turned into a `.iso` using the aforementioned packages and can also be used as a standalone OS since clonezilla supports restoring the image file into a machine.
+
+# License
+This project is licensed under the **GPL-3.0 License**. See the `LICENSE` file for more information.
+
+# Acknoledgements
+- **Neutrovertido**: for putting all of this together, authoring most of the scripts, authoring the documentation and compiling resources.
+- **UJCV**: for providing the resources.
+- **Debian Team**: For creating the Debian operating system.
+- **GNOME Team**: For creating the GNOME desktop environment.
+- **Independent GNOME Extensions developers**: For creating many of the extensions used on this project.
+- **Inter Font Team**: For creating the Inter font.
+- **Fira Fonts Team**: For creating the Fira Code and Fira Sans fonts.
+- **Papirus Development Team**: For creating the Papirus icon theme and the papirus-folders.
+- **Sam Hewitt**: For creating the paper-icon-theme and paper cursor.
+- **vinceliuice**: For creating the Colloid and WhiteSur gtk themes.
+- **zayronxio**: For creating the Mkos icons.
+- **ful1e5**: For creating the apple cursor.
+- **eylles**: For creating the adw-gtk2-colorizer tool.
+- **lassekongo83**: For creating adw-gtk3.
+- **The Assassin**: For creating AppImageLauncher.
+- **Veracrypt**: For their excellent encryption software.
