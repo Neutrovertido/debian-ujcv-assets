@@ -284,23 +284,25 @@ Now to apply it, run `./gui-libadwaita-tc.py` from the `scripts` folder and sele
 
 In case the gtk3 theme does not apply, you can manually do so from `gnome-tweaks`.
 
+You also need to manually change the shell-theme, you can do so from `gnome-tweaks` or using the `user-themes` extension.
+
 ### Flatpak Integration
 By default, flatpak ignores the set theme, to address this issue we must run the following commands:
 
 ```bash
-flatpak override --filesystem=xdg-config/gtk-3.0:ro
+sudo flatpak override --filesystem=xdg-config/gtk-3.0:ro
 ```
 
 ```bash
-flatpak override --filesystem=xdg-config/gtk-4.0:ro
+sudo flatpak override --filesystem=xdg-config/gtk-4.0:ro
 ```
 
 ```bash
-flatpak override --filesystem=~/.themes
+sudo flatpak override --filesystem=~/.themes
 ```
 
 ```bash
-flatpak override --filesystem=~/.local/share/themes
+sudo flatpak override --filesystem=~/.local/share/themes
 ```
 
 With this, the themeing should work properly for both GTK2/3/4 and flatpak applications.
