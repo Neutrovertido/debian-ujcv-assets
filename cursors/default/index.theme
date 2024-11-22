@@ -1,1 +1,2 @@
-/etc/alternatives/x-cursor-theme
+[Icon Theme]
+Inherits=Paper
