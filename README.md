@@ -331,3 +331,15 @@ We also provide alternative fonts and fonts that are used for non-system tasks. 
 
 Next, change the fonts from `gnome-tweaks` to the following:
 ![Fonts](/screenshots/tweaks-fonts.png)
+
+
+## Cursors
+GNOME uses a rather outdated default cursor. To change it, we are going to install the following:
+- **macOS/macOS-White**: For MacOS enthusiasts.
+- **paper-cursor-theme**: The main cursor of the distro. A fork of the original paper cursor with a few patches made to work seamlessly with Debian 12 and its variants.
+
+To install these, just copy the contents of the `cursors` folder into the `~/.icons` or the `/usr/share/icons` folders.
+
+Also make sure to replace the `default` folder since it will make it so paper is applied globally to all apps.
+
+To apply/change the cursor, head to `gnome-tweaks` and change it from there.
