@@ -2,6 +2,8 @@
 UJCV Debian distro assets and configuration files.  
 This also serves as a guide to build the distro from vanilla Debian 12 Bookworm (GNOME Live ISO recommended).
 
+The default password is `2024`.
+
 ## Packages to be installed manually:
 - wget
 - git
@@ -255,7 +257,50 @@ The step to apply the gresource is straightforward, just replace `/usr/share/gno
 To see the changes, **reboot**, a simple log-out will not do.
 
 ## User Customization
-We previously installed the extensions. Now we need to change a few things to match the system branding.
+Now we need to change a few user settings to match the system branding.
 
 1. Change the profile picture to `user.png` from the `system-assets` folder.
 2. Change the desktop wallpaper to `wallpaper.jpg` also from the `system-assets` folder.
+
+## Themes
+We provide a few themes to increase the visual appeal of the system:
+- **adw-gtk3**: For the default, vanilla gnome-ish look. Includes, brand-new support for gtk2 themes too.
+- **WhiteSur-gtk-theme**: For MacOS enthusiasts.
+- **Colloid-gtk-theme**: The main theme of this project, a selection of different palettes with a modern look.
+
+These themes also include scripts to help the user customize their system. For example, the `Colloid-gtk-theme` includes a helper script to change the accent color, color palette and several other tweaks.
+
+Since, `Colloid-gtk-theme` os the main theme of the project, we will use it as an example. To apply it, head over to the `repos/Colloid-gtk-theme` folder and run the `helper.sh` script using:
+
+```bash
+chmod +x helper.sh && ./helper.sh
+```
+
+Next, enter the accent color, dark/light mode and the tweaks. For the tweaks, we recommend `catppuccin rimless black`.
+
+With this, the theme has been installed properly.
+
+Now to apply it, run `./gui-libadwaita-tc.py` from the `scripts` folder and select the theme and hit apply. This will ensure it applies to both gtk3 and gtk4 applications.
+
+In case the gtk3 theme does not apply, you can manually do so from `gnome-tweaks`.
+
+### Flatpak Integration
+By default, flatpak ignores the set theme, to address this issue we must run the following commands:
+
+```bash
+flatpak override --filesystem=xdg-config/gtk-3.0:ro
+```
+
+```bash
+flatpak override --filesystem=xdg-config/gtk-4.0:ro
+```
+
+```bash
+flatpak override --filesystem=~/.themes
+```
+
+```bash
+flatpak override --filesystem=~/.local/share/themes
+```
+
+With this, the themeing should work properly for both GTK2/3/4 and flatpak applications.
