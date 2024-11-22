@@ -4,6 +4,11 @@ This also serves as a guide to build the distro from vanilla Debian 12 Bookworm 
 
 The default password is `2024`.
 
+## Final Result
+![Final Result](/screenshots/final.png)
+
+# Steps to reproduce
+
 ## Packages to be installed manually:
 - wget
 - git
@@ -205,6 +210,9 @@ Open gnome-tweaks and change the following settings:
 - Enable window resizing with secondary button
 
 ## GRUB configuration
+
+![GRUB](/screenshots/grub.png)
+
 Place `bg-ujcv.png` from `system-assets` in `/boot/grub/`
 
 
@@ -262,6 +270,9 @@ To simplify the process, we provide the `gnome-shell-theme.gresource` inside `sy
 The step to apply the gresource is straightforward, just replace `/usr/share/gnome-shell/gnome-shell-theme.gresource` with the one provided by us.
 
 To see the changes, **reboot**, a simple log-out will not do.
+
+## Resulting GDM
+![GDM](/screenshots/gdm.png)
 
 ## User Customization
 Now we need to change a few user settings to match the system branding.
@@ -352,10 +363,13 @@ Also make sure to replace the `default` folder since it will make it so paper is
 
 To apply/change the cursor, head to `gnome-tweaks` and change it from there.
 
+## Customization Result
+![Customized OS](/screenshots/customized.png)
+
 # Default Applications
 Change the default music player to `Amberol` and the default video player to `Celluloid`.
 
 # Building the ISO
 To build a functional live `.iso` file and make it installable you will need to use `live-build` and later `calamares` to make an installer. But this is all outside the scope of this repo.
 
-We decided to not go the extra mile and build a live `.iso` but we did create a clonezilla image that can be later be turned into a `.iso` using the aforementioned packages and can also be used as a standalone OS since clonezilla supports restoring the image file into a machine.
+We decided to not go the extra mile and build a live `.iso` but we did create a **clonezilla** image that can be later be turned into a `.iso` using the aforementioned packages and can also be used as a standalone OS since clonezilla supports restoring the image file into a machine.
