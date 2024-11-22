@@ -185,6 +185,7 @@ This can all be done within the "Extensions" app.
 - Change Pano shortcut to Super+V (for this you will need to disable a system shortcut first)
 - Make Status Area Horizontal Spacing's spacing smaller
 - Change Logo Menu to use an icon of your liking, in this case we use the monochrome Debian icon.
+- You may pin apps to Dash-to-Dock/Dash-to-Panel as per your preference.
 
 
 ## Shortcuts
