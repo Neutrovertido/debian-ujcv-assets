@@ -185,7 +185,7 @@ This can all be done within the "Extensions" app.
 - Change Pano shortcut to Super+V (for this you will need to disable a system shortcut first)
 - Make Status Area Horizontal Spacing's spacing smaller
 - Change Logo Menu to use an icon of your liking, in this case we use the monochrome Debian icon.
-- You may pin apps to Dash-to-Dock/Dash-to-Panel as per your preference.
+- You may pin apps to Dash-to-Dock/Dash-to-Panel as per your preference. If using Dash to Dock, move the App icon to the left side of the dock and also shrink the dock.
 
 
 ## Shortcuts
@@ -323,3 +323,11 @@ papirus-folders -C darkcyan
 See also [the papirus-folders github repo](https://github.com/PapirusDevelopmentTeam/papirus-folders) to see the available colors and more information.
 
 Lastly, select `Papirus` as your icon theme on `gnome-tweaks`.
+
+## Fonts
+The default font of GNOME while not bad, feels a bit outdated. So , we are going to use a more modern font **Inter** to improve the overall look and feel of the system.
+
+We also provide alternative fonts and fonts that are used for non-system tasks. To install them just copy the contents from the  `fonts` folder into the `~/.local/share/fonts` or `/usr/share/fonts` folders.
+
+Next, change the fonts from `gnome-tweaks` to the following:
+![Fonts](/screenshots/tweaks-fonts.png)
