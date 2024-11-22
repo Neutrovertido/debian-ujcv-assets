@@ -46,6 +46,20 @@ Command:
 sudo apt install wget git papirus-icon-theme python3 bleachbit python3-tk gnome-tweaks ttf-mscorefonts-installer cmus gdu timeshift dconf-editor htop celluloid rar unrar firejail gparted gnome-disk-utility speedtest-cli
 ```
 
+Finally, install the provided `.deb` packages from the `deb packages` directory:
+
+```bash
+cd deb\ packages/
+```
+
+```bash
+sudo dpkg -i *
+```
+
+```bash
+sudo apt -f install
+```
+
 ### Firefox Replacement
 
 Replace Firefox-ESR with Firefox (non ESR) using the following commands:
