@@ -143,14 +143,14 @@ This is a heavily opinionated and customized GNOME setup. Some of the customizat
 
 ## Extensions
 - Caffeine
-- Pano
-- Dash to Dock / Dash to Panel
+- Pano (requires some extra setup)
+- Dash to Dock / Dash to Panel (choose on or the other)
 - Desktop Icons ng Gtk4
 - Removable Drive Menu
 - User Themes
-- Sound Input & Output Device Chooser
+- QSTweak
 - Status Area Horizontal Spacing
-- Tray Icons: Reloaded
+- AppIndicator and KStatusNotifierItem Support (alternatively, you could use Tray Icons: Reloaded)
 - Expandable Notifications
 - Vitals
 - No overview at startup
@@ -172,3 +172,8 @@ Then you can install the extensions by searching them and clicking the off/on sw
 ![GNOME Extension](screenshots/gnome-extension.png)
 
 Repeat until you installed all the extensions listed above.
+
+#### Important: For 'Pano' to work you will need to install the following packages:
+```bash
+sudo apt install gir1.2-gda-5.0 gir1.2-gsound-1.0
+```
