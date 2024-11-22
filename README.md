@@ -348,3 +348,6 @@ To install these, just copy the contents of the `cursors` folder into the `~/.ic
 Also make sure to replace the `default` folder since it will make it so paper is applied globally to all apps.
 
 To apply/change the cursor, head to `gnome-tweaks` and change it from there.
+
+# Default Applications
+Change the default music player to `Amberol` and the default video player to `Celluloid`.
