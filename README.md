@@ -1,7 +1,7 @@
 # debian-ujcv-assets
 UJCV Debian distro assets and configuration files.
 
-To install manually:
+## Packages to be installed manually:
 - wget
 - git
 - papirus-icon-theme
@@ -44,3 +44,18 @@ Command:
 ```sh
 sudo apt install wget git papirus-icon-theme python3 bleachbit python3-tk gnome-tweaks ttf-mscorefonts-installer cmus gdu timeshift dconf-editor htop celluloid rar unrar firejail gparted gnome-disk-utility speedtest-cli
 ```
+
+## Enable Flatpak
+```bash
+sudo apt install flatpak
+```
+
+```bash
+sudo apt install gnome-software-plugin-flatpak
+```
+
+```bash
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+
+Then restart
