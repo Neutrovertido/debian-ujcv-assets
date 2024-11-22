@@ -332,6 +332,8 @@ We also provide alternative fonts and fonts that are used for non-system tasks. 
 Next, change the fonts from `gnome-tweaks` to the following:
 ![Fonts](/screenshots/tweaks-fonts.png)
 
+And finally, change the `gnome-terminal` font to `Fira Code`
+
 
 ## Cursors
 GNOME uses a rather outdated default cursor. To change it, we are going to install the following:
