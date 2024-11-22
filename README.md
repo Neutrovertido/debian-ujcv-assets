@@ -177,3 +177,19 @@ Repeat until you installed all the extensions listed above.
 ```bash
 sudo apt install gir1.2-gda-5.0 gir1.2-gsound-1.0
 ```
+
+### Extensions Configuration:
+This can all be done within the "Extensions" app.
+- Change Pano shortcut to Super+V (for this you will need to disable a system shortcut first)
+- Make Status Area Horizontal Spacing's spacing smaller
+
+
+## Shortcuts
+- Set `gnome-terminal` to launch with shortcut: `Ctrl + Alt + T`
+
+## Tweaks Configuration
+Open gnome-tweaks and change the following settings:
+- Add day of the week on top panel
+- Add minimize and maximize buttons to windows
+- Change touchpad to "Area"
+- Enable window resizing with secondary button
