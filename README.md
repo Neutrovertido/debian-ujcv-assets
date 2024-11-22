@@ -354,3 +354,8 @@ To apply/change the cursor, head to `gnome-tweaks` and change it from there.
 
 # Default Applications
 Change the default music player to `Amberol` and the default video player to `Celluloid`.
+
+# Building the ISO
+To build a functional live `.iso` file and make it installable you will need to use `live-build` and later `calamares` to make an installer. But this is all outside the scope of this repo.
+
+We decided to not go the extra mile and build a live `.iso` but we did create a clonezilla image that can be later be turned into a `.iso` using the aforementioned packages and can also be used as a standalone OS since clonezilla supports restoring the image file into a machine.
