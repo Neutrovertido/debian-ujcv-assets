@@ -88,6 +88,10 @@ Pin-Priority: 1000
 ```
 
 ```bash
+sudo apt remove firefox-esr
+```
+
+```bash
 sudo apt-get update && sudo apt-get install firefox
 ```
 
