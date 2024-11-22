@@ -1,5 +1,6 @@
 # debian-ujcv-assets
-UJCV Debian distro assets and configuration files. This also serves as a guide to build the distro from vanilla Debian 12 Bookworm (GNOME Live ISO recommended).
+UJCV Debian distro assets and configuration files.  
+This also serves as a guide to build the distro from vanilla Debian 12 Bookworm (GNOME Live ISO recommended).
 
 ## Packages to be installed manually:
 - wget
@@ -109,6 +110,12 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 Then restart
 
 ### Flatpak Apps Installation:
+The following flatpak apps are installed:
+- Flatseal
+- Video Downloader
+- MissionCenter
+- MarkText
+
 ```bash
-flatpak install com.github.tchx84.Flatseal com.github.unrud.VideoDownloader io.missioncenter.MissionCenter
+flatpak install com.github.tchx84.Flatseal com.github.unrud.VideoDownloader io.missioncenter.MissionCenter com.github.marktext.marktext
 ```
