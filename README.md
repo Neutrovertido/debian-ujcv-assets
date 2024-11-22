@@ -346,7 +346,8 @@ The default font of GNOME while not bad, feels a bit outdated. So , we are going
 
 We also provide alternative fonts and fonts that are used for non-system tasks. To install them just copy the contents from the  `fonts` folder into the `~/.local/share/fonts` or `/usr/share/fonts` folders.
 
-Next, change the fonts from `gnome-tweaks` to the following:
+Next, change the fonts from `gnome-tweaks` to the following:  
+
 ![Fonts](/screenshots/tweaks-fonts.png)
 
 And finally, change the `gnome-terminal` font to `Fira Code`
