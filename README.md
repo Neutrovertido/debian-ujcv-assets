@@ -182,6 +182,7 @@ sudo apt install gir1.2-gda-5.0 gir1.2-gsound-1.0
 This can all be done within the "Extensions" app.
 - Change Pano shortcut to Super+V (for this you will need to disable a system shortcut first)
 - Make Status Area Horizontal Spacing's spacing smaller
+- Change Logo Menu to use an icon of your liking, in this case we use the monochrome Debian icon.
 
 
 ## Shortcuts
@@ -202,3 +203,10 @@ Append the following line to `/etc/default/grub`
 ```sh
 GRUB_BACKGROUND="/boot/grub/bg-ujcv.png"
 ```
+
+And lastly, run:
+```bash
+sudo update-grub
+```
+
+Reboot to see the changes.
