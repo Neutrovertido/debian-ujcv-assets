@@ -137,3 +137,38 @@ The following flatpak apps are installed:
 ```bash
 flatpak install com.github.tchx84.Flatseal com.github.unrud.VideoDownloader io.missioncenter.MissionCenter com.github.marktext.marktext
 ```
+
+# Customization
+This is a heavily opinionated and customized GNOME setup. Some of the customizations include:
+
+## Extensions
+- Caffeine
+- Pano
+- Dash to Dock / Dash to Panel
+- Desktop Icons ng Gtk4
+- Removable Drive Menu
+- User Themes
+- Sound Input & Output Device Chooser
+- Status Area Horizontal Spacing
+- Tray Icons: Reloaded
+- Expandable Notifications
+- Vitals
+- No overview at startup
+- Blur my shell
+- Rounded Windows Corners
+- Alphabetical App Grid
+- Logo Menu
+- Apps Menu
+- Emoji Selector
+- Places Status Indicator
+- Color Picker
+
+These can be fetched from https://extensions.gnome.org/. Since no UUID is provided at the time of the making of this distro, it cannot be automated via `gnome-extensions`.
+
+To install extensions from the website, you will have to first install a Firefox extension that will appear in a card at the top of the website when you first visit it.
+![Firefox Extension](screenshots/firefox-extension.png)
+
+Then you can install the extensions by searching them and clicking the off/on switch.
+![GNOME Extension](screenshots/gnome-extension.png)
+
+Repeat until you installed all the extensions listed above.
