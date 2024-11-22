@@ -59,3 +59,8 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 ```
 
 Then restart
+
+### Flatpak Apps Installation:
+```bash
+flatpak install com.github.tchx84.Flatseal com.github.unrud.VideoDownloader io.missioncenter.MissionCenter
+```
