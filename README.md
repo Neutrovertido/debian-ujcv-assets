@@ -307,3 +307,19 @@ sudo flatpak override --filesystem=~/.local/share/themes
 ```
 
 With this, the themeing should work properly for both GTK2/3/4 and flatpak applications.
+
+## Icons
+
+We provide a few icon themes to increase the visual appeal of the system and to match the themes selected:
+- **Mkos-Big-Sur**: For MacOS enthusiasts. Requires manual installation by dragging the folder to the `~/.icons` folder.
+- **Papirus**: This one is the main icon theme of the system. Modern, flat, colorful icons that are also customizable via `papirus-folders`. They both were installed via `apt` and `dpkg` in the first steps.
+
+To match the system aesthetic, we are going to use `papirus-folders` to change the folder color with the following command:
+
+```bash
+papirus-folders -C darkcyan
+```
+
+See also [the papirus-folders github repo](https://github.com/PapirusDevelopmentTeam/papirus-folders) to see the available colors and more information.
+
+Lastly, select `Papirus` as your icon theme on `gnome-tweaks`.
