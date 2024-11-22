@@ -26,6 +26,8 @@ The default password is `2024`.
 - gparted
 - gnome-disk-utility
 - speedtest
+- neofetch
+- scss
 
 But first:
 ```bash
@@ -45,7 +47,7 @@ PATH=$PATH:/home/pi/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/pi/.local/bin:
 
 Command:
 ```sh
-sudo apt install wget git papirus-icon-theme python3 bleachbit python3-tk gnome-tweaks ttf-mscorefonts-installer cmus gdu timeshift dconf-editor htop celluloid rar unrar firejail gparted gnome-disk-utility speedtest-cli
+sudo apt install wget git papirus-icon-theme python3 bleachbit python3-tk gnome-tweaks ttf-mscorefonts-installer cmus gdu timeshift dconf-editor htop celluloid rar unrar firejail gparted gnome-disk-utility speedtest-cli neofetch scss
 ```
 
 Finally, install the provided `.deb` packages from the `deb packages` directory:
@@ -135,9 +137,10 @@ The following flatpak apps are installed:
 - Video Downloader
 - MissionCenter
 - MarkText
+- Amberol
 
 ```bash
-flatpak install com.github.tchx84.Flatseal com.github.unrud.VideoDownloader io.missioncenter.MissionCenter com.github.marktext.marktext
+flatpak install com.github.tchx84.Flatseal com.github.unrud.VideoDownloader io.missioncenter.MissionCenter com.github.marktext.marktext io.bassi.Amberol
 ```
 
 # Customization
