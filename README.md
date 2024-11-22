@@ -210,3 +210,34 @@ sudo update-grub
 ```
 
 Reboot to see the changes.
+
+## GDM Greeter Logo
+First, place `distributor-logo.png` from `system-assets` in `/usr/share/pixmaps/logo/`
+
+Then, create the gdm profile which contains the following lines:  
+
+`/etc/dconf/profile/gdm`
+
+```bash
+user-db:user
+system-db:gdm
+file-db:/usr/share/gdm/greeter-dconf-defaults
+```
+
+Alternatively, just copy the `gdm` file provided in the repo.
+
+---
+
+"gdm" is the name of a dconf database.
+
+Create a gdm database for machine-wide settings in `/etc/dconf/db/gdm.d/01-logo`:
+
+```bash
+[org/gnome/login-screen]
+logo='/usr/share/pixmaps/logo/distributor-logo.png'
+```
+
+Finally, run:
+```bash
+sudo dconf update
+```
